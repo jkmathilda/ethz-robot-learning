@@ -1,9 +1,25 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-03-03T21:01:09.518Z",
-  "activeFeatures": [],
-  "primaryFeature": null,
-  "features": {},
+  "lastUpdated": "2026-03-12T12:17:38.400Z",
+  "activeFeatures": [
+    "exercises"
+  ],
+  "primaryFeature": "exercises",
+  "features": {
+    "exercises": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-03-12T12:17:38.400Z",
+        "lastUpdated": "2026-03-12T12:17:38.400Z"
+      },
+      "lastFile": "/Users/junkyunglee/Codes/ETH/ethz-robot-learning/hw2_robot_control_mdps/exercises/ex2.py"
+    }
+  },
   "pipeline": {
     "currentPhase": 1,
     "level": "Dynamic",
@@ -12,7 +28,14 @@
   "session": {
     "startedAt": "2026-03-03T21:01:09.518Z",
     "onboardingCompleted": false,
-    "lastActivity": "2026-03-03T21:01:09.518Z"
+    "lastActivity": "2026-03-12T12:17:38.400Z"
   },
-  "history": []
+  "history": [
+    {
+      "timestamp": "2026-03-12T12:17:38.400Z",
+      "feature": "exercises",
+      "phase": "do",
+      "action": "updated"
+    }
+  ]
 }

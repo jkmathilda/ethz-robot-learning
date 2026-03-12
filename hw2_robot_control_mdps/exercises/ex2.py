@@ -53,10 +53,22 @@ def pid_control(tracking_error_history, timestep, Kp=150.0, Ki=0.0, Kd=0.01):
     """
 
     P = tracking_error_history[-1]
-    I = np.sum(tracking_error_history) * timestep
+    I = np.sum(tracking_error_history, axis=0) * timestep
     D = (tracking_error_history[-1] - tracking_error_history[-2]) / timestep if len(tracking_error_history) > 1 else 0
 
     return Kp * P + Ki * I + Kd * D
 
     raise NotImplementedError()
             
+
+"""
+<Theoretical Questions>
+1. If you keep increasing K_P, what issue arises when tracking the waypoints?
+    - Excessive proportional gain causes the system to overshoot the target and oscillate, potentially becoming unstable.
+2. How does K_D mitigate the effect you saw above when increasing K_P?
+    - The derivative term damps oscillations by opposing rapid changes in error, effectively adding resistance proportional to the
+  rate of change and thus reducing the overshoot caused by high K_P. 
+3. In what scenarios is a non-zero K_I needed for the controller to perform well?
+    - A non-zero integral gain is needed when there is a persistent steady-state error (eg. due to gravity or
+  friction) that the proportional term alone cannot eliminate. 
+"""

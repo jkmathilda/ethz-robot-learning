@@ -2,7 +2,7 @@ import numpy as np
 import mujoco
 
 
-def get_lemniscate_keypoint(t, a=0.2):
+def get_lemniscate_keypoint(t, a=0.02):
     """
     TODO:
     Generate a set of keypoints using Lemniscate of Bernoulli (infinity sign) in the Y-Z plane.
@@ -142,15 +142,20 @@ def ik_track(model, data, site_name, target_pos,
 """
 <Theoretical Questions>
 1. If you increase the width of the Lemniscate (increasing a), what issue can happen with the robot performing IK?
-    - When the width of the Lemniscate is increased, 
-    - the robot may have difficulty reaching the keypoints due to its limited workspace and joint limits. The robot's end-effector may not be able to reach the wider points on the trajectory, leading to increased position errors and potential failure in IK convergence.
+    - The target points may fall outside the robot's reachable workspace, causing the IK solver to fail to converge or
+  produce joint configurations near singularities/joint limits.  
 
 2. What can happen if you change the dt parameter in IK?
-    - If the dt parameter is too large, the IK solver may overshoot the target position, leading to oscillations or divergence in the joint configuration updates. This can cause the robot to fail to converge to the desired end-effector position.
-    - If the dt parameter is too small, the IK solver may take a very long time to converge, as it will make very small updates to the joint configuration in each iteration. This can lead to increased computational time and inefficiency in reaching the target position.
+    - A large dt causes overshooting and potential divergence, while a small dt leads to slow convergence requiring many more  
+  iterations. 
 
 3. We implemented a simple numerical IK solver. What are the advantages and disadvantages compared to an analytical IK solver?
-    - In our simple numerical IK solver, we use Damped least squares method to update the join configurations iteratively. The advantages of this approach is that it can handle a wide range of robot configurations and is relatively easy to implement. It can also be more robust to singularities in the robot's kinematics. However, the disadvantages are that it can be computationally expensive and may not guarantee convergence to the exact solution, especially for complex trajectories or when the initial guess is far from the target.
+    - Numerical IK is general-purpose and handles arbitrary kinematic chains including redundant robots, but is slower,
+  may converge to local minima, and doesn't guarantee an exact solution, unlike analytical IK which is fast and exact but only 
+  available for specific robot geometries. 
 
 4. What are the limits of our IK solver compared to state-of-the-art IK solvers?
+    - Our solver ignores orientation tracking, handles only single targets (no collision avoidance or joint limit
+  constraints), and uses a fixed damping factor rather than adaptive damping, unlike state-of-the-art solvers that
+  incorporate these and use multiple restarts or optimization-based formulations. 
 """
