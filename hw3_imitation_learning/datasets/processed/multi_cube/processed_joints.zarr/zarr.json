@@ -1,0 +1,18 @@
+{
+  "attributes": {
+    "action_space": "joints",
+    "action_dim": 5,
+    "action_spec": "joint_angles(5)",
+    "state_spec": "joint_angles(5)",
+    "state_key": "state_joints",
+    "action_key": "action_joints",
+    "num_episodes": 15,
+    "num_dagger_episodes": 0,
+    "num_transitions": 4066,
+    "source_zarrs": [
+      "datasets/raw/multi_cube/teleop/2026-03-26_14-20-28/so100_multicube_teleop.zarr"
+    ]
+  },
+  "zarr_format": 3,
+  "node_type": "group"
+}

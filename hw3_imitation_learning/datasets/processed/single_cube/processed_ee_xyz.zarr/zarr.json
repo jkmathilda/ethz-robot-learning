@@ -1,0 +1,22 @@
+{
+  "attributes": {
+    "action_space": "ee",
+    "action_dim": 3,
+    "action_spec": "ee_pos_xyz(3)",
+    "state_spec": "ee_pos_xyz(3)",
+    "state_key": "state_ee_xyz",
+    "action_key": "action_ee_xyz",
+    "num_episodes": 43,
+    "num_dagger_episodes": 25,
+    "num_transitions": 14563,
+    "source_zarrs": [
+      "datasets/raw/single_cube/dagger/2026-03-26_13-16-16/so100_transfer_cube_teleop.zarr",
+      "datasets/raw/single_cube/dagger/2026-03-26_13-32-51/so100_transfer_cube_teleop.zarr",
+      "datasets/raw/single_cube/dagger/2026-03-26_14-02-32/so100_transfer_cube_teleop.zarr",
+      "datasets/raw/single_cube/teleop/2026-03-26_12-26-28/so100_transfer_cube_teleop.zarr",
+      "datasets/raw/single_cube/teleop/2026-03-26_12-54-00/so100_transfer_cube_teleop.zarr"
+    ]
+  },
+  "zarr_format": 3,
+  "node_type": "group"
+}

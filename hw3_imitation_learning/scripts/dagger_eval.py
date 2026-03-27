@@ -10,9 +10,7 @@ later be merged with the original demonstrations for retraining via
 compute_actions.py which will produce a merged .zarr dataset to train on.
 
 Usage:
-    python scripts/dagger_eval.py \\
-        --checkpoint checkpoints/single_cube/best_model_ee_xyz_obstacle.pt \\
-        --num-episodes 10
+    python scripts/dagger_eval.py --checkpoint checkpoints/single_cube/best_model_ee_xyz_obstacle.pt --num-episodes 10
 """
 
 from __future__ import annotations

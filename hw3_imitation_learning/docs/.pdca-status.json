@@ -1,0 +1,103 @@
+{
+  "version": "2.0",
+  "lastUpdated": "2026-03-26T16:15:20.230Z",
+  "activeFeatures": [
+    "hw3",
+    "scripts"
+  ],
+  "primaryFeature": "hw3",
+  "features": {
+    "hw3": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-03-25T15:46:04.244Z",
+        "lastUpdated": "2026-03-26T16:15:20.230Z"
+      },
+      "lastFile": "/Users/junkyunglee/Codes/ETH/ethz-robot-learning/hw3_imitation_learning/hw3/model.py"
+    },
+    "scripts": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-03-26T14:21:40.951Z",
+        "lastUpdated": "2026-03-26T16:07:02.800Z"
+      },
+      "lastFile": "/Users/junkyunglee/Codes/ETH/ethz-robot-learning/hw3_imitation_learning/scripts/train.py"
+    }
+  },
+  "pipeline": {
+    "currentPhase": 1,
+    "level": "Dynamic",
+    "phaseHistory": []
+  },
+  "session": {
+    "startedAt": "2026-03-25T15:18:10.718Z",
+    "onboardingCompleted": false,
+    "lastActivity": "2026-03-26T16:15:20.230Z"
+  },
+  "history": [
+    {
+      "timestamp": "2026-03-25T15:46:04.244Z",
+      "feature": "hw3",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-25T15:56:01.731Z",
+      "feature": "hw3",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-25T16:34:58.417Z",
+      "feature": "hw3",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T13:38:35.610Z",
+      "feature": "hw3",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T14:21:40.951Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T14:58:53.438Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T15:14:46.811Z",
+      "feature": "hw3",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T16:07:02.800Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T16:15:20.230Z",
+      "feature": "hw3",
+      "phase": "do",
+      "action": "updated"
+    }
+  ]
+}
