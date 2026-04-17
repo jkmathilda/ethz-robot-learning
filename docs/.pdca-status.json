@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-03-12T12:17:38.400Z",
+  "lastUpdated": "2026-04-16T08:26:58.805Z",
   "activeFeatures": [
     "exercises"
   ],
@@ -15,9 +15,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-12T12:17:38.400Z",
-        "lastUpdated": "2026-03-12T12:17:38.400Z"
+        "lastUpdated": "2026-04-16T08:26:58.805Z"
       },
-      "lastFile": "/Users/junkyunglee/Codes/ETH/ethz-robot-learning/hw2_robot_control_mdps/exercises/ex2.py"
+      "lastFile": "/Users/junkyunglee/Codes/ETH/ethz-robot-learning/hw4_reinforcement_learning/exercises/ex1_mdp.py"
     }
   },
   "pipeline": {
@@ -28,11 +28,17 @@
   "session": {
     "startedAt": "2026-03-03T21:01:09.518Z",
     "onboardingCompleted": false,
-    "lastActivity": "2026-03-12T12:17:38.400Z"
+    "lastActivity": "2026-04-16T08:26:58.805Z"
   },
   "history": [
     {
       "timestamp": "2026-03-12T12:17:38.400Z",
+      "feature": "exercises",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-16T08:26:58.805Z",
       "feature": "exercises",
       "phase": "do",
       "action": "updated"

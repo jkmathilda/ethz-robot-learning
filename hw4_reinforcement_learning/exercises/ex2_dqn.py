@@ -38,7 +38,7 @@ class ReplayBuffer:
             done (bool): whether the episode terminates after this transition
         """
         # TODO: Append the transition to the replay buffer.                  
-        raise NotImplementedError
+        self.buffer.append((state, action, reward, next_state, done))
 
     def sample(self, batch_size):
         """
@@ -108,7 +108,8 @@ class QNet(torch.nn.Module):
         """
         # TODO: Implement the forward pass of the network.         
         # Use ReLU after the first linear layer.                   
-        raise NotImplementedError
+        x = F.relu(self.fc1(x))
+        return self.fc2(x)
 
 
 class DQN:
@@ -169,7 +170,10 @@ class DQN:
         # - For exploitation, convert the state to a torch tensor
         #   of shape (1, state_dim), move it to `self.device`,
         #   and choose the action with the largest Q-value.
-        raise NotImplementedError
+        if np.random.random() < self.epsilon:
+            return np.random.randint(self.action_dim)
+        state = torch.tensor(state, dtype=torch.float32).unsqueeze(0).to(self.device)
+        return self.q_net(state).argmax().item()
 
     def predict_action(self, state):
         """
@@ -224,7 +228,8 @@ class DQN:
             # Hint:
             # - Use the target network for next-state values.
             # - DQN target: r + gamma * max_a' Q_target(s', a') * (1 - done)
-            raise NotImplementedError
+            max_next_q = self.target_q_net(next_states).max(1)[0].view(-1, 1)
+            q_targets = rewards + self.gamma * max_next_q * (1 - dones)
 
         # Compute DQN loss
         dqn_loss = torch.mean(F.mse_loss(q_values, q_targets))
@@ -259,3 +264,10 @@ class DQN:
         checkpoint = torch.load(path, map_location=self.device)
         self.q_net.load_state_dict(checkpoint["q_net"])
         self.target_q_net.load_state_dict(checkpoint["target_q_net"])
+
+'''
+Theoretical Questions
+1. Why is experience replay important in DQN?
+2. What is the role of the target network in DQN? How does it improve stability?
+3. What is Double DQN, and how does it reduce overestimation bias compared to standard DQN? (See: Deep Reinforcement Learning with Double Q-learning)
+'''
